@@ -8,12 +8,27 @@
 
 import UIKit
 
+final class QuoteDislpayObject {
+    let authorText: String
+    let quoteText: String
+    
+    init(quote: Quote) {
+        quoteText = quote.text
+        authorText = QuoteDislpayObject.formatAuthorText(quote.author)
+    }
+    
+    static func formatAuthorText(authorText: String) -> String {
+        return "-- \(authorText)"
+    }
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        populateQuote()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +38,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func nextQuote(sender: AnyObject) {
+        populateQuote()
+    }
+    
+    private func populateQuote() {
+        let quote = QuotesManager.sharedManager.nextQuote()
+        let quoteDisplay = QuoteDislpayObject(quote: quote)
         
+        quoteLabel.text = quoteDisplay.quoteText
+        authorLabel.text = quoteDisplay.authorText
     }
     
     

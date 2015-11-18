@@ -20,12 +20,20 @@ final class QuotesManager {
         extractQuotesFromFile(QuotesManager.kPlistName)
     }
     
-    func extractQuotesFromFile(fileName: String) {
-        guard let quoteDicts = NSArray(contentsOfFile: fileName) as? [QuoteDict] else {
-            // maybe  throws?
-            return
+    private func extractQuotesFromFile(fileName: String) {
+        guard let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "plist"), let quoteDicts = NSArray(contentsOfFile: path) as? [QuoteDict] else {
+            fatalError("couldn't load file: \(fileName). Path may not exist in main bundle.")
         }
         quotes = QuotesParser.quotesFromDictionaries(quoteDicts)
+    }
+    
+    func nextQuote() -> Quote  {
+        let max = UInt32(quotes.count)
+        if max <= 0 {
+            fatalError("insufficient quotes!")
+        }
+        let randomIndex = Int(arc4random_uniform(max))
+        return quotes[randomIndex]
     }
 }
 

@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1T-8t-Lgh">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="261" y="285" width="78" height="30"/>
+                                <state key="normal" title="Next Quote"/>
                                 <connections>
                                     <action selector="nextQuote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qc4-OS-OTu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-q3-gnF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-q3-gnF">
                                 <rect key="frame" x="0.0" y="20" width="600" height="160"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -34,6 +34,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVl-dC-PVO">
+                                <rect key="frame" x="5" y="180" width="590" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kr9-kk-hbo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -41,10 +50,14 @@
                             <constraint firstItem="V1T-8t-Lgh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N50-wu-lyB"/>
                             <constraint firstItem="D4a-q3-gnF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="R4j-Yi-SfB"/>
                             <constraint firstItem="D4a-q3-gnF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dWp-kk-PdR"/>
+                            <constraint firstItem="MVl-dC-PVO" firstAttribute="top" secondItem="D4a-q3-gnF" secondAttribute="bottom" id="eFP-2t-Bz8"/>
+                            <constraint firstItem="MVl-dC-PVO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gci-Op-TKk"/>
                             <constraint firstItem="V1T-8t-Lgh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o3u-0Y-Epy"/>
+                            <constraint firstItem="MVl-dC-PVO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-10" id="zXb-1s-R57"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="authorLabel" destination="MVl-dC-PVO" id="KP7-QD-lWC"/>
                         <outlet property="quoteLabel" destination="D4a-q3-gnF" id="jXx-6t-Tp8"/>
                     </connections>
                 </viewController>
