@@ -31,12 +31,44 @@ final class QuotesManager {
     }
     
     func nextQuote() -> Quote  {
+        return randomIndexNonEmpty(quotes)
+    }
+    
+    private func randomIndexNonEmpty(quotes: [Quote]) -> Quote {
         let max = UInt32(quotes.count)
         if max <= 0 {
             fatalError("insufficient quotes!")
         }
         let randomIndex = Int(arc4random_uniform(max))
         return quotes[randomIndex]
+    }
+    
+    func nextQuoteClosestToNow() -> Quote  {
+        let allTimeTuples = TimeOfDay.allValues().map({ (timeOfDay) -> (NSTimeInterval?, TimeOfDay)  in
+            return (timeOfDay.dateForToday()?.timeIntervalSince1970, timeOfDay)
+        }).filter { (timeOfDayTuple) -> Bool in
+            return timeOfDayTuple.0 != nil
+        }.map { (timeOfDayTuple) -> (NSTimeInterval, TimeOfDay) in
+            return (timeOfDayTuple.0!, timeOfDayTuple.1)
+        }
+        
+        let now = NSDate().timeIntervalSince1970
+        
+        var minDiff: Double = abs(allTimeTuples.first!.0 - now)
+        var time: TimeOfDay = .Morning
+        for timeTuple in allTimeTuples {
+            let diff = abs(timeTuple.0 - now)
+            if diff < minDiff {
+                minDiff = diff
+                time = timeTuple.1
+            }
+        }
+        
+        let quotesForNow = quotes.filter { (quote) -> Bool in
+            return quote.timeOfDay == time
+        }
+        
+        return randomIndexNonEmpty(quotesForNow)
     }
     
     func addQuote(quote: Quote) {

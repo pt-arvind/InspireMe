@@ -18,6 +18,21 @@ class QuoteComplicationController : NSObject, CLKComplicationDataSource {
     /// Provide the entry that should currently be displayed.
     /// If you pass back nil, we will conclude you have no content loaded and will stop talking to you until you next call -reloadTimelineForComplication:.
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimelineEntry?) -> Void) {
+        switch complication.family {
+        case .ModularLarge:
+            let template = CLKComplicationTemplateModularLargeStandardBody()
+            let quote = QuotesManager.sharedManager.nextQuoteClosestToNow()
+            
+            template.headerTextProvider = CLKSimpleTextProvider(text: quote.author)
+            template.body1TextProvider = CLKSimpleTextProvider(text: quote.text)
+            
+            let quoteDate = quote.timeOfDay.dateForToday() ?? NSDate()
+            let timelineEntry = CLKComplicationTimelineEntry(date: quoteDate, complicationTemplate: template)
+            
+            handler(timelineEntry)
+        default:
+            handler(nil)
+        }
         
         handler(nil)
     }
