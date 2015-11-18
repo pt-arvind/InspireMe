@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hPr-84-NaF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quotes!-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InspireMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuotesViewController" customModule="InspireMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,7 +26,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-q3-gnF">
-                                <rect key="frame" x="0.0" y="20" width="600" height="160"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="160"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="2Ya-AI-VAj"/>
@@ -35,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVl-dC-PVO">
-                                <rect key="frame" x="5" y="180" width="590" height="21"/>
+                                <rect key="frame" x="5" y="224" width="590" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Kr9-kk-hbo"/>
                                 </constraints>
@@ -56,6 +57,17 @@
                             <constraint firstItem="MVl-dC-PVO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-10" id="zXb-1s-R57"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="Vl6-OM-5Fh"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Quotes!" id="6eO-xQ-6VJ">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="0YQ-e4-3Hs">
+                            <connections>
+                                <segue destination="e2o-8u-Ebk" kind="presentation" id="qvs-Fq-pIx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="authorLabel" destination="MVl-dC-PVO" id="KP7-QD-lWC"/>
                         <outlet property="quoteLabel" destination="D4a-q3-gnF" id="jXx-6t-Tp8"/>
@@ -63,7 +75,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1149" y="392"/>
+        </scene>
+        <!--Add New Quote-->
+        <scene sceneID="rMM-Dy-VmL">
+            <objects>
+                <viewController id="ywZ-eS-Ry8" customClass="NewQuoteViewController" customModule="InspireMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CWC-lI-MtA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pos-qV-HxH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tTs-h4-2wk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wab-iN-QPx">
+                                <rect key="frame" x="20" y="102.5" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-th-m7V">
+                                <rect key="frame" x="20" y="74" width="47" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSi-ck-5xM">
+                                <rect key="frame" x="20" y="169" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-is-E0v">
+                                <rect key="frame" x="20" y="140" width="51.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wab-iN-QPx" firstAttribute="width" secondItem="tTs-h4-2wk" secondAttribute="width" constant="-40" id="4d3-HU-fgB"/>
+                            <constraint firstItem="wab-iN-QPx" firstAttribute="centerX" secondItem="tTs-h4-2wk" secondAttribute="centerX" id="7rf-Nf-Une"/>
+                            <constraint firstItem="Wcc-is-E0v" firstAttribute="top" secondItem="wab-iN-QPx" secondAttribute="bottom" constant="8" id="9xr-lF-ta4"/>
+                            <constraint firstItem="OSi-ck-5xM" firstAttribute="width" secondItem="tTs-h4-2wk" secondAttribute="width" constant="-40" id="GGG-2y-7PV"/>
+                            <constraint firstItem="OSi-ck-5xM" firstAttribute="centerX" secondItem="tTs-h4-2wk" secondAttribute="centerX" id="JYF-gL-YYF"/>
+                            <constraint firstItem="P0R-th-m7V" firstAttribute="leading" secondItem="tTs-h4-2wk" secondAttribute="leadingMargin" id="QCc-AQ-WUn"/>
+                            <constraint firstItem="Wcc-is-E0v" firstAttribute="leading" secondItem="tTs-h4-2wk" secondAttribute="leadingMargin" id="S8r-mq-XSH"/>
+                            <constraint firstItem="OSi-ck-5xM" firstAttribute="top" secondItem="Wcc-is-E0v" secondAttribute="bottom" constant="8" id="TsQ-dD-SzH"/>
+                            <constraint firstItem="P0R-th-m7V" firstAttribute="top" secondItem="CWC-lI-MtA" secondAttribute="bottom" constant="10" id="vqh-Q7-2T0"/>
+                            <constraint firstItem="wab-iN-QPx" firstAttribute="top" secondItem="P0R-th-m7V" secondAttribute="bottom" constant="8" id="zpf-dR-ivN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Quote" id="sxi-BC-KUW">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="YdQ-IJ-Ft9">
+                            <connections>
+                                <action selector="cancel:" destination="ywZ-eS-Ry8" id="BDa-PX-Gm8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="vGx-xK-mjK">
+                            <connections>
+                                <action selector="save:" destination="ywZ-eS-Ry8" id="9FZ-Ww-raM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorField" destination="OSi-ck-5xM" id="nsb-i7-fWM"/>
+                        <outlet property="quoteField" destination="wab-iN-QPx" id="GRN-Gp-S2p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnL-aV-cEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="1269"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fqZ-yj-0PU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hPr-84-NaF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1tS-Qa-C9S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PRV-OW-L4C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hib-b0-gbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="337" y="392"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KDF-jC-nQR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e2o-8u-Ebk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jZd-wM-jtz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ywZ-eS-Ry8" kind="relationship" relationship="rootViewController" id="lT6-yU-hNv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ses-fe-X1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="1269"/>
         </scene>
     </scenes>
 </document>

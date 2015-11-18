@@ -11,7 +11,11 @@ import Foundation
 final class QuoteHelper {
     static let kAnonymous = "Anonymous"
     static func validateAuthor(author: String?) -> String {
-        return author ?? kAnonymous
+        if let author = author where author != "" {
+            return author
+        } else {
+            return kAnonymous
+        }
     }
 }
 

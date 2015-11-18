@@ -22,7 +22,7 @@ final class QuoteDislpayObject {
     }
 }
 
-class ViewController: UIViewController {
+class QuotesViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
 
@@ -49,7 +49,10 @@ class ViewController: UIViewController {
         authorLabel.text = quoteDisplay.authorText
     }
     
-    
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+    }
 }
 

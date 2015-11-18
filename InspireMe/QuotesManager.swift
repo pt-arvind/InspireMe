@@ -11,8 +11,8 @@ import Foundation
 typealias QuoteDict = [String : String]
 
 final class QuotesManager {
-    static let kPlistName = "quotes"
-    var quotes = [Quote]()
+    private static let kPlistName = "quotes"
+    private var quotes = [Quote]()
     
     
     static let sharedManager = QuotesManager()
@@ -34,6 +34,10 @@ final class QuotesManager {
         }
         let randomIndex = Int(arc4random_uniform(max))
         return quotes[randomIndex]
+    }
+    
+    func addQuote(quote: Quote) {
+        quotes.append(quote)
     }
 }
 

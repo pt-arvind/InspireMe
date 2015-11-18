@@ -10,8 +10,9 @@
 		B07B09041BFCAF3800B2D97A /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B09031BFCAF3800B2D97A /* QuotesManager.swift */; };
 		B07B09061BFCB03400B2D97A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B09051BFCB03400B2D97A /* Quote.swift */; };
 		B07B09081BFCB28400B2D97A /* quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07B09071BFCB28400B2D97A /* quotes.plist */; };
+		B0D28D5F1BFCC53700696C8D /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D28D5E1BFCC53700696C8D /* NewQuoteViewController.swift */; };
 		B0E5A5161BFC1FB700A95CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5A5151BFC1FB700A95CBC /* AppDelegate.swift */; };
-		B0E5A5181BFC1FB700A95CBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5A5171BFC1FB700A95CBC /* ViewController.swift */; };
+		B0E5A5181BFC1FB700A95CBC /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5A5171BFC1FB700A95CBC /* QuotesViewController.swift */; };
 		B0E5A51B1BFC1FB700A95CBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E5A5191BFC1FB700A95CBC /* Main.storyboard */; };
 		B0E5A51D1BFC1FB700A95CBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E5A51C1BFC1FB700A95CBC /* Assets.xcassets */; };
 		B0E5A5201BFC1FB700A95CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E5A51E1BFC1FB700A95CBC /* LaunchScreen.storyboard */; };
@@ -21,9 +22,10 @@
 		B07B09031BFCAF3800B2D97A /* QuotesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		B07B09051BFCB03400B2D97A /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		B07B09071BFCB28400B2D97A /* quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quotes.plist; sourceTree = "<group>"; };
+		B0D28D5E1BFCC53700696C8D /* NewQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
 		B0E5A5121BFC1FB700A95CBC /* InspireMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E5A5151BFC1FB700A95CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0E5A5171BFC1FB700A95CBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0E5A5171BFC1FB700A95CBC /* QuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		B0E5A51A1BFC1FB700A95CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0E5A51C1BFC1FB700A95CBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0E5A51F1BFC1FB700A95CBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				B0E5A5151BFC1FB700A95CBC /* AppDelegate.swift */,
-				B0E5A5171BFC1FB700A95CBC /* ViewController.swift */,
+				B0E5A5171BFC1FB700A95CBC /* QuotesViewController.swift */,
+				B0D28D5E1BFCC53700696C8D /* NewQuoteViewController.swift */,
 				B0E5A5191BFC1FB700A95CBC /* Main.storyboard */,
 				B07B09031BFCAF3800B2D97A /* QuotesManager.swift */,
 				B07B09051BFCB03400B2D97A /* Quote.swift */,
@@ -146,7 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07B09061BFCB03400B2D97A /* Quote.swift in Sources */,
-				B0E5A5181BFC1FB700A95CBC /* ViewController.swift in Sources */,
+				B0D28D5F1BFCC53700696C8D /* NewQuoteViewController.swift in Sources */,
+				B0E5A5181BFC1FB700A95CBC /* QuotesViewController.swift in Sources */,
 				B07B09041BFCAF3800B2D97A /* QuotesManager.swift in Sources */,
 				B0E5A5161BFC1FB700A95CBC /* AppDelegate.swift in Sources */,
 			);
