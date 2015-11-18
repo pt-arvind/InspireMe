@@ -12,8 +12,7 @@ typealias QuoteDict = [String : String]
 
 final class QuotesManager {
     private static let kPlistName = "quotes"
-    private var quotes = [Quote]()
-    
+    var quotes = [Quote]()
     
     static let sharedManager = QuotesManager()
     private init() {
@@ -27,6 +26,10 @@ final class QuotesManager {
         quotes = QuotesParser.quotesFromDictionaries(quoteDicts)
     }
     
+    func updateQuotes(quotes: [Quote]) {
+        self.quotes = quotes
+    }
+    
     func nextQuote() -> Quote  {
         let max = UInt32(quotes.count)
         if max <= 0 {
@@ -38,6 +41,23 @@ final class QuotesManager {
     
     func addQuote(quote: Quote) {
         quotes.append(quote)
+    }
+}
+
+final class QuotesSerializer {
+    static func serializeQuoteToDictionary(quote: Quote) -> QuoteDict{
+        var quoteDict = QuoteDict()
+        quoteDict["text"] = quote.text
+        quoteDict["author"] = quote.author
+        return quoteDict
+    }
+    
+    static func serializeQuotesToDictionary(quotes: [Quote]) -> [QuoteDict] {
+        var quoteDicts = [QuoteDict]()
+        for quote in quotes {
+            quoteDicts.append(serializeQuoteToDictionary(quote))
+        }
+        return quoteDicts
     }
 }
 

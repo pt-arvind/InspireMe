@@ -8,19 +8,7 @@
 
 import UIKit
 
-final class QuoteDislpayObject {
-    let authorText: String
-    let quoteText: String
-    
-    init(quote: Quote) {
-        quoteText = quote.text
-        authorText = QuoteDislpayObject.formatAuthorText(quote.author)
-    }
-    
-    static func formatAuthorText(authorText: String) -> String {
-        return "-- \(authorText)"
-    }
-}
+
 
 class QuotesViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
@@ -43,7 +31,7 @@ class QuotesViewController: UIViewController {
     
     private func populateQuote() {
         let quote = QuotesManager.sharedManager.nextQuote()
-        let quoteDisplay = QuoteDislpayObject(quote: quote)
+        let quoteDisplay = QuoteDisplayObject(quote: quote)
         
         quoteLabel.text = quoteDisplay.quoteText
         authorLabel.text = quoteDisplay.authorText

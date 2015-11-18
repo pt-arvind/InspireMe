@@ -12,8 +12,11 @@
                     <items>
                         <group width="1" height="202" alignment="left" layout="vertical" id="VnF-7a-zfe">
                             <items>
-                                <label width="136" height="120.5" alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="0Xu-RY-YFi"/>
-                                <label width="136" height="25.5" alignment="left" text="Label" textAlignment="right" id="p54-Pc-pPg"/>
+                                <label width="136" height="136.5" alignment="left" textAlignment="left" numberOfLines="0" id="0Xu-RY-YFi">
+                                    <string key="text">Testing, attention please, to detention soon as someone mentions me, here's my 10 cents, my 2 cents is free, a nuisance, who sent, you sent for me?</string>
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                </label>
+                                <label width="136" height="25.5" alignment="left" text="Eminem" textAlignment="right" minimumScaleFactor="0.29999999999999999" id="p54-Pc-pPg"/>
                                 <button width="1" alignment="left" title="Next Quote" id="weF-uz-vGg">
                                     <connections>
                                         <action selector="nextQuote" destination="AgC-eL-Hgc" id="o09-aG-6YI"/>

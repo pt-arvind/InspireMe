@@ -37,6 +37,10 @@ class NewQuoteViewController: UIViewController {
         let quote = QuoteFactory.makeQuote(quoteText, author: authorText)
         QuotesManager.sharedManager.addQuote(quote)
         
+        let serializedQuotes = QuotesSerializer.serializeQuotesToDictionary(QuotesManager.sharedManager.quotes)
+        let applicationDict = ["quotes" : serializedQuotes]
+        PhoneToWatchConnectivitySender.sendData(applicationDict)
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
     

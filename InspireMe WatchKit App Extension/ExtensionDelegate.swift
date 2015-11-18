@@ -10,8 +10,11 @@ import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
+    //MARK: WKExtensionDelegate
+    
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        WatchConnectivityManager.sharedManager.setupWatchConnectivity()
     }
 
     func applicationDidBecomeActive() {

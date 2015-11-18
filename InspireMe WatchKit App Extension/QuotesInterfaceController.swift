@@ -16,15 +16,21 @@ class QuotesInterfaceController: WKInterfaceController {
     @IBOutlet var authorLabel: WKInterfaceLabel!
     
     @IBAction func nextQuote() {
+        populateQuote()
+    }
+    
+    private func populateQuote() {
+        let quote = QuotesManager.sharedManager.nextQuote()
+        let quoteDisplay = QuoteDisplayObject(quote: quote)
         
+        quoteLabel.setText(quoteDisplay.quoteText)
+        authorLabel.setText(quoteDisplay.authorText)
     }
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         // Configure interface objects here.
-        
-        
-        
+        populateQuote()
     }
 
     override func willActivate() {

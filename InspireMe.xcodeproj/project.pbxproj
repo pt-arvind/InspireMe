@@ -17,6 +17,14 @@
 		B0B0D1EB1BFCDA72006B4FAD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D1EA1BFCDA72006B4FAD /* ExtensionDelegate.swift */; };
 		B0B0D1ED1BFCDA72006B4FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B0D1EC1BFCDA72006B4FAD /* Assets.xcassets */; };
 		B0B0D1F11BFCDA72006B4FAD /* InspireMe WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B0B0D1D71BFCDA72006B4FAD /* InspireMe WatchKit App.app */; };
+		B0B0D1FD1BFD02A0006B4FAD /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D1FC1BFD02A0006B4FAD /* WatchConnectivityManager.swift */; };
+		B0B0D1FF1BFD06CD006B4FAD /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B09031BFCAF3800B2D97A /* QuotesManager.swift */; };
+		B0B0D2001BFD06D0006B4FAD /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B09051BFCB03400B2D97A /* Quote.swift */; };
+		B0B0D2011BFD06D3006B4FAD /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D1FC1BFD02A0006B4FAD /* WatchConnectivityManager.swift */; };
+		B0B0D2031BFD0713006B4FAD /* PhoneToWatchConnectivitySender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D2021BFD0713006B4FAD /* PhoneToWatchConnectivitySender.swift */; };
+		B0B0D2051BFD0DCC006B4FAD /* QuotesDisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D2041BFD0DCC006B4FAD /* QuotesDisplayObject.swift */; };
+		B0B0D2061BFD0DDE006B4FAD /* QuotesDisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D2041BFD0DCC006B4FAD /* QuotesDisplayObject.swift */; };
+		B0B0D2091BFD19A7006B4FAD /* quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07B09071BFCB28400B2D97A /* quotes.plist */; };
 		B0D28D5F1BFCC53700696C8D /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D28D5E1BFCC53700696C8D /* NewQuoteViewController.swift */; };
 		B0E5A5161BFC1FB700A95CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5A5151BFC1FB700A95CBC /* AppDelegate.swift */; };
 		B0E5A5181BFC1FB700A95CBC /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5A5171BFC1FB700A95CBC /* QuotesViewController.swift */; };
@@ -80,6 +88,9 @@
 		B0B0D1EA1BFCDA72006B4FAD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		B0B0D1EC1BFCDA72006B4FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0B0D1EE1BFCDA72006B4FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B0D1FC1BFD02A0006B4FAD /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		B0B0D2021BFD0713006B4FAD /* PhoneToWatchConnectivitySender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneToWatchConnectivitySender.swift; sourceTree = "<group>"; };
+		B0B0D2041BFD0DCC006B4FAD /* QuotesDisplayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesDisplayObject.swift; sourceTree = "<group>"; };
 		B0D28D5E1BFCC53700696C8D /* NewQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
 		B0E5A5121BFC1FB700A95CBC /* InspireMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E5A5151BFC1FB700A95CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +140,18 @@
 			path = "InspireMe WatchKit App Extension";
 			sourceTree = "<group>";
 		};
+		B0B0D1FE1BFD06B0006B4FAD /* SharedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B07B09031BFCAF3800B2D97A /* QuotesManager.swift */,
+				B07B09051BFCB03400B2D97A /* Quote.swift */,
+				B0B0D1FC1BFD02A0006B4FAD /* WatchConnectivityManager.swift */,
+				B0B0D2041BFD0DCC006B4FAD /* QuotesDisplayObject.swift */,
+				B07B09071BFCB28400B2D97A /* quotes.plist */,
+			);
+			name = SharedFiles;
+			sourceTree = "<group>";
+		};
 		B0E5A5091BFC1FB700A95CBC = {
 			isa = PBXGroup;
 			children = (
@@ -152,16 +175,15 @@
 		B0E5A5141BFC1FB700A95CBC /* InspireMe */ = {
 			isa = PBXGroup;
 			children = (
+				B0B0D1FE1BFD06B0006B4FAD /* SharedFiles */,
 				B0E5A5151BFC1FB700A95CBC /* AppDelegate.swift */,
 				B0E5A5171BFC1FB700A95CBC /* QuotesViewController.swift */,
 				B0D28D5E1BFCC53700696C8D /* NewQuoteViewController.swift */,
 				B0E5A5191BFC1FB700A95CBC /* Main.storyboard */,
-				B07B09031BFCAF3800B2D97A /* QuotesManager.swift */,
-				B07B09051BFCB03400B2D97A /* Quote.swift */,
 				B0E5A51C1BFC1FB700A95CBC /* Assets.xcassets */,
 				B0E5A51E1BFC1FB700A95CBC /* LaunchScreen.storyboard */,
 				B0E5A5211BFC1FB700A95CBC /* Info.plist */,
-				B07B09071BFCB28400B2D97A /* quotes.plist */,
+				B0B0D2021BFD0713006B4FAD /* PhoneToWatchConnectivitySender.swift */,
 			);
 			path = InspireMe;
 			sourceTree = "<group>";
@@ -278,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0B0D1ED1BFCDA72006B4FAD /* Assets.xcassets in Resources */,
+				B0B0D2091BFD19A7006B4FAD /* quotes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B0D2001BFD06D0006B4FAD /* Quote.swift in Sources */,
 				B0B0D1EB1BFCDA72006B4FAD /* ExtensionDelegate.swift in Sources */,
+				B0B0D1FF1BFD06CD006B4FAD /* QuotesManager.swift in Sources */,
 				B0B0D1E91BFCDA72006B4FAD /* QuotesInterfaceController.swift in Sources */,
+				B0B0D2061BFD0DDE006B4FAD /* QuotesDisplayObject.swift in Sources */,
+				B0B0D2011BFD06D3006B4FAD /* WatchConnectivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +337,11 @@
 			files = (
 				B07B09061BFCB03400B2D97A /* Quote.swift in Sources */,
 				B0D28D5F1BFCC53700696C8D /* NewQuoteViewController.swift in Sources */,
+				B0B0D2051BFD0DCC006B4FAD /* QuotesDisplayObject.swift in Sources */,
 				B0E5A5181BFC1FB700A95CBC /* QuotesViewController.swift in Sources */,
 				B07B09041BFCAF3800B2D97A /* QuotesManager.swift in Sources */,
+				B0B0D2031BFD0713006B4FAD /* PhoneToWatchConnectivitySender.swift in Sources */,
+				B0B0D1FD1BFD02A0006B4FAD /* WatchConnectivityManager.swift in Sources */,
 				B0E5A5161BFC1FB700A95CBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
