@@ -89,8 +89,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wab-iN-QPx">
-                                <rect key="frame" x="20" y="102.5" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Inspire us all!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wab-iN-QPx">
+                                <rect key="frame" x="20" y="102" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -100,7 +100,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSi-ck-5xM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plutarch, Eminem, You, etc." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSi-ck-5xM">
                                 <rect key="frame" x="20" y="169" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -111,17 +111,33 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timeframe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-20-fL3">
+                                <rect key="frame" x="20" y="207" width="82.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Timeframe, i.e. morning, noon, etc." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2wF-9k-UlS">
+                                <rect key="frame" x="20" y="235" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wab-iN-QPx" firstAttribute="width" secondItem="tTs-h4-2wk" secondAttribute="width" constant="-40" id="4d3-HU-fgB"/>
                             <constraint firstItem="wab-iN-QPx" firstAttribute="centerX" secondItem="tTs-h4-2wk" secondAttribute="centerX" id="7rf-Nf-Une"/>
                             <constraint firstItem="Wcc-is-E0v" firstAttribute="top" secondItem="wab-iN-QPx" secondAttribute="bottom" constant="8" id="9xr-lF-ta4"/>
+                            <constraint firstItem="2wF-9k-UlS" firstAttribute="centerX" secondItem="tTs-h4-2wk" secondAttribute="centerX" id="Fe2-cl-Uur"/>
                             <constraint firstItem="OSi-ck-5xM" firstAttribute="width" secondItem="tTs-h4-2wk" secondAttribute="width" constant="-40" id="GGG-2y-7PV"/>
                             <constraint firstItem="OSi-ck-5xM" firstAttribute="centerX" secondItem="tTs-h4-2wk" secondAttribute="centerX" id="JYF-gL-YYF"/>
+                            <constraint firstItem="2wF-9k-UlS" firstAttribute="top" secondItem="YPr-20-fL3" secondAttribute="bottom" constant="8" id="Ltv-qI-Dal"/>
+                            <constraint firstItem="YPr-20-fL3" firstAttribute="top" secondItem="OSi-ck-5xM" secondAttribute="bottom" constant="8" id="NYM-mq-zD4"/>
                             <constraint firstItem="P0R-th-m7V" firstAttribute="leading" secondItem="tTs-h4-2wk" secondAttribute="leadingMargin" id="QCc-AQ-WUn"/>
                             <constraint firstItem="Wcc-is-E0v" firstAttribute="leading" secondItem="tTs-h4-2wk" secondAttribute="leadingMargin" id="S8r-mq-XSH"/>
                             <constraint firstItem="OSi-ck-5xM" firstAttribute="top" secondItem="Wcc-is-E0v" secondAttribute="bottom" constant="8" id="TsQ-dD-SzH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="YPr-20-fL3" secondAttribute="leading" id="UUP-ii-TjU"/>
+                            <constraint firstItem="2wF-9k-UlS" firstAttribute="width" secondItem="tTs-h4-2wk" secondAttribute="width" constant="-40" id="cKo-Sb-W86"/>
                             <constraint firstItem="P0R-th-m7V" firstAttribute="top" secondItem="CWC-lI-MtA" secondAttribute="bottom" constant="10" id="vqh-Q7-2T0"/>
                             <constraint firstItem="wab-iN-QPx" firstAttribute="top" secondItem="P0R-th-m7V" secondAttribute="bottom" constant="8" id="zpf-dR-ivN"/>
                         </constraints>
@@ -141,6 +157,7 @@
                     <connections>
                         <outlet property="authorField" destination="OSi-ck-5xM" id="nsb-i7-fWM"/>
                         <outlet property="quoteField" destination="wab-iN-QPx" id="GRN-Gp-S2p"/>
+                        <outlet property="timeframeField" destination="2wF-9k-UlS" id="yVG-O4-n4J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KnL-aV-cEo" userLabel="First Responder" sceneMemberID="firstResponder"/>

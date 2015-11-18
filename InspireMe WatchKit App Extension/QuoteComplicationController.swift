@@ -18,7 +18,7 @@ class QuoteComplicationController : NSObject, CLKComplicationDataSource {
     /// Provide the entry that should currently be displayed.
     /// If you pass back nil, we will conclude you have no content loaded and will stop talking to you until you next call -reloadTimelineForComplication:.
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimelineEntry?) -> Void) {
-
+        
         handler(nil)
     }
     
