@@ -25,6 +25,7 @@
 		B0B0D2051BFD0DCC006B4FAD /* QuotesDisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D2041BFD0DCC006B4FAD /* QuotesDisplayObject.swift */; };
 		B0B0D2061BFD0DDE006B4FAD /* QuotesDisplayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D2041BFD0DCC006B4FAD /* QuotesDisplayObject.swift */; };
 		B0B0D2091BFD19A7006B4FAD /* quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07B09071BFCB28400B2D97A /* quotes.plist */; };
+		B0B0D20B1BFD1EDB006B4FAD /* QuoteComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0D20A1BFD1EDB006B4FAD /* QuoteComplicationController.swift */; };
 		B0D28D5F1BFCC53700696C8D /* NewQuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D28D5E1BFCC53700696C8D /* NewQuoteViewController.swift */; };
 		B0E5A5161BFC1FB700A95CBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5A5151BFC1FB700A95CBC /* AppDelegate.swift */; };
 		B0E5A5181BFC1FB700A95CBC /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E5A5171BFC1FB700A95CBC /* QuotesViewController.swift */; };
@@ -91,6 +92,7 @@
 		B0B0D1FC1BFD02A0006B4FAD /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		B0B0D2021BFD0713006B4FAD /* PhoneToWatchConnectivitySender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneToWatchConnectivitySender.swift; sourceTree = "<group>"; };
 		B0B0D2041BFD0DCC006B4FAD /* QuotesDisplayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesDisplayObject.swift; sourceTree = "<group>"; };
+		B0B0D20A1BFD1EDB006B4FAD /* QuoteComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteComplicationController.swift; sourceTree = "<group>"; };
 		B0D28D5E1BFCC53700696C8D /* NewQuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewQuoteViewController.swift; sourceTree = "<group>"; };
 		B0E5A5121BFC1FB700A95CBC /* InspireMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InspireMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E5A5151BFC1FB700A95CBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				B0B0D1EA1BFCDA72006B4FAD /* ExtensionDelegate.swift */,
 				B0B0D1EC1BFCDA72006B4FAD /* Assets.xcassets */,
 				B0B0D1EE1BFCDA72006B4FAD /* Info.plist */,
+				B0B0D20A1BFD1EDB006B4FAD /* QuoteComplicationController.swift */,
 			);
 			path = "InspireMe WatchKit App Extension";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0B0D2001BFD06D0006B4FAD /* Quote.swift in Sources */,
+				B0B0D20B1BFD1EDB006B4FAD /* QuoteComplicationController.swift in Sources */,
 				B0B0D1EB1BFCDA72006B4FAD /* ExtensionDelegate.swift in Sources */,
 				B0B0D1FF1BFD06CD006B4FAD /* QuotesManager.swift in Sources */,
 				B0B0D1E91BFCDA72006B4FAD /* QuotesInterfaceController.swift in Sources */,

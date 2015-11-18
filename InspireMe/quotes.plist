@@ -34,7 +34,13 @@
 	</dict>
 	<dict>
 		<key>text</key>
-		<string>Blah blah blah blah blah blah blah blah</string>
+		<string>If a tree falls in the forest and nobody hears it, is it still global warming?</string>
+	</dict>
+	<dict>
+		<key>author</key>
+		<string>Steve Jobs</string>
+		<key>text</key>
+		<string>This changes everything.... again!</string>
 	</dict>
 </array>
 </plist>
