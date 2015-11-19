@@ -32,26 +32,6 @@ enum TimeOfDay : String {
     case Evening = "evening"
     case Night = "night"
     
-    func dateForToday() -> NSDate? {
-        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-        var date = calendar?.dateBySettingHour(0, minute: 0, second: 0, ofDate: NSDate(), options: [])
-        
-        switch(self) {
-        case .Morning:
-            date = calendar?.dateBySettingHour(9, minute: 0, second: 0, ofDate: NSDate(), options: [])
-        case .Noon:
-            date = calendar?.dateBySettingHour(12, minute: 0, second: 0, ofDate: NSDate(), options: [])
-        case .Afternoon:
-            date = calendar?.dateBySettingHour(15, minute: 0, second: 0, ofDate: NSDate(), options: [])
-        case .Evening:
-            date = calendar?.dateBySettingHour(18, minute: 0, second: 0, ofDate: NSDate(), options: [])
-        case .Night:
-            date = calendar?.dateBySettingHour(21, minute: 0, second: 0, ofDate: NSDate(), options: [])
-        }
-        
-        return date
-    }
-    
     static func allValues() -> [TimeOfDay] {
         return [.Morning, .Noon, .Afternoon, .Evening, .Night]
     }

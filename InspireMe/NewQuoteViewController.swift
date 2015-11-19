@@ -29,8 +29,6 @@ class NewQuoteViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         pickerView.dataSource = self
         pickerView.delegate = self
         
-
-        
         timeframeField.inputAccessoryView = toolBar
         timeframeField.inputView = pickerView
     }
