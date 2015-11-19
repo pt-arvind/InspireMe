@@ -55,8 +55,9 @@ final class QuotesParser {
     }
     
     static func quoteFromDictionary(quoteDict: QuoteDict) -> Quote? {
-        guard let text = quoteDict["text"] else { return nil }
+        guard let text = quoteDict["text"], timeframe = quoteDict["timeframe"], timeOfDay = TimeOfDay(rawValue: timeframe) else { return nil }
         let author = quoteDict["author"]
-        return QuoteFactory.makeQuote(text, author: author)
+        
+        return QuoteFactory.makeQuote(text, author: author, timeOfDay: timeOfDay)
     }
 }
