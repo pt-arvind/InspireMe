@@ -10,6 +10,7 @@
 		B07B09041BFCAF3800B2D97A /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B09031BFCAF3800B2D97A /* QuotesManager.swift */; };
 		B07B09061BFCB03400B2D97A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B09051BFCB03400B2D97A /* Quote.swift */; };
 		B07B09081BFCB28400B2D97A /* quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07B09071BFCB28400B2D97A /* quotes.plist */; };
+		B09374591C00E33A00A1C004 /* GlanceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09374581C00E33A00A1C004 /* GlanceInterfaceController.swift */; };
 		B0B0D1DB1BFCDA72006B4FAD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0B0D1D91BFCDA72006B4FAD /* Interface.storyboard */; };
 		B0B0D1DD1BFCDA72006B4FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B0D1DC1BFCDA72006B4FAD /* Assets.xcassets */; };
 		B0B0D1E41BFCDA72006B4FAD /* InspireMe WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B0B0D1E31BFCDA72006B4FAD /* InspireMe WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -80,6 +81,7 @@
 		B07B09031BFCAF3800B2D97A /* QuotesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		B07B09051BFCB03400B2D97A /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		B07B09071BFCB28400B2D97A /* quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quotes.plist; sourceTree = "<group>"; };
+		B09374581C00E33A00A1C004 /* GlanceInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceInterfaceController.swift; sourceTree = "<group>"; };
 		B0B0D1D71BFCDA72006B4FAD /* InspireMe WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InspireMe WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B0D1DA1BFCDA72006B4FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B0B0D1DC1BFCDA72006B4FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				B0B0D1EC1BFCDA72006B4FAD /* Assets.xcassets */,
 				B0B0D1EE1BFCDA72006B4FAD /* Info.plist */,
 				B0B0D20A1BFD1EDB006B4FAD /* QuoteComplicationController.swift */,
+				B09374581C00E33A00A1C004 /* GlanceInterfaceController.swift */,
 			);
 			path = "InspireMe WatchKit App Extension";
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0B0D2001BFD06D0006B4FAD /* Quote.swift in Sources */,
+				B09374591C00E33A00A1C004 /* GlanceInterfaceController.swift in Sources */,
 				B0B0D20B1BFD1EDB006B4FAD /* QuoteComplicationController.swift in Sources */,
 				B0B0D1EB1BFCDA72006B4FAD /* ExtensionDelegate.swift in Sources */,
 				B0B0D1FF1BFD06CD006B4FAD /* QuotesManager.swift in Sources */,
@@ -566,6 +570,7 @@
 				B0B0D1F51BFCDA72006B4FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0B0D1F81BFCDA72006B4FAD /* Build configuration list for PBXNativeTarget "InspireMe WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +579,7 @@
 				B0B0D1F31BFCDA72006B4FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0E5A50D1BFC1FB700A95CBC /* Build configuration list for PBXProject "InspireMe" */ = {
 			isa = XCConfigurationList;

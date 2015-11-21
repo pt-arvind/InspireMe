@@ -41,5 +41,28 @@
             </objects>
             <point key="canvasLocation" x="488" y="476"/>
         </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="FVV-wi-X2k">
+            <objects>
+                <glanceController topTemplateType="extraLarge" id="yza-G0-M3l" customClass="GlanceInterfaceController" customModule="InspireMe_WatchKit_App_Extension">
+                    <items>
+                        <label alignment="left" text="Arvind's Wedding" minimumScaleFactor="0.10000000000000001" id="GO3-oG-xQ4"/>
+                        <group alignment="left" id="ANk-yK-KF6">
+                            <items>
+                                <timer width="136" alignment="center" verticalAlignment="center" textAlignment="center" id="HDj-si-VpN">
+                                    <calendarUnit key="units" month="YES" day="YES" hour="YES" minute="YES" second="YES" weekOfMonth="YES"/>
+                                </timer>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="avatarImageGroup" destination="ANk-yK-KF6" id="OHd-LB-etT"/>
+                        <outlet property="weddingCountdown" destination="HDj-si-VpN" id="rHE-Tp-Stf"/>
+                        <outlet property="weddingLabel" destination="GO3-oG-xQ4" id="PAR-pv-aXr"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="855" y="440"/>
+        </scene>
     </scenes>
 </document>

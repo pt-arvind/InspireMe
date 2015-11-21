@@ -47,9 +47,19 @@ final class WatchConnectivityManager : NSObject, WCSessionDelegate {
         
         dispatch_async(WatchConnectivityManager.img_queue) { () -> Void in
             if let data = NSData(contentsOfURL: file.fileURL), image = UIImage(data: data) {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    NSNotificationCenter.defaultCenter().postNotificationName("imageReceivedNotification", object: nil, userInfo: ["image":image])
-                })
+                
+                let data = UIImagePNGRepresentation(image)
+                let cachesDirectory = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+                NSLog("gonna try writing to file")
+                if let data = data, filePath = cachesDirectory.first, fileURL = NSURL(string: "file://"+filePath)?.URLByAppendingPathComponent("userImage.png") {
+                    // save file
+                    NSLog("writing to file")
+                    data.writeToURL(fileURL, atomically: true)
+                    NSLog("wrote to file \(fileURL)")
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        NSNotificationCenter.defaultCenter().postNotificationName("imageReceivedNotification", object: nil, userInfo: ["image":image])
+                    })
+                }
             }
         }
 
