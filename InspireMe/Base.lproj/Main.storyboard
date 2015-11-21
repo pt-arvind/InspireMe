@@ -41,25 +41,50 @@
                                     <constraint firstAttribute="height" constant="21" id="Kr9-kk-hbo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-mB-JpY">
+                                <rect key="frame" x="259" y="345" width="82" height="30"/>
+                                <state key="normal" title="Send Image"/>
+                                <connections>
+                                    <action selector="sendImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vDb-v0-iL8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cls-57-0hr">
+                                <rect key="frame" x="180" y="383" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Pjd-Xt-Z6J"/>
+                                    <constraint firstAttribute="height" constant="128" id="qGm-jd-mdQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dv3-gi-ckg">
+                                <rect key="frame" x="20" y="527" width="560" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Cls-57-0hr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4MZ-56-cGd"/>
                             <constraint firstItem="D4a-q3-gnF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kc4-Tu-e4a"/>
                             <constraint firstItem="V1T-8t-Lgh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="N50-wu-lyB"/>
+                            <constraint firstItem="Cls-57-0hr" firstAttribute="top" secondItem="2dU-mB-JpY" secondAttribute="bottom" constant="8" id="N7Z-wi-Mrd"/>
                             <constraint firstItem="D4a-q3-gnF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="R4j-Yi-SfB"/>
+                            <constraint firstItem="2dU-mB-JpY" firstAttribute="top" secondItem="V1T-8t-Lgh" secondAttribute="bottom" constant="30" id="Sob-Em-Pl7"/>
+                            <constraint firstItem="2dU-mB-JpY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bJR-Wu-aDi"/>
                             <constraint firstItem="D4a-q3-gnF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dWp-kk-PdR"/>
                             <constraint firstItem="MVl-dC-PVO" firstAttribute="top" secondItem="D4a-q3-gnF" secondAttribute="bottom" id="eFP-2t-Bz8"/>
+                            <constraint firstItem="Dv3-gi-ckg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-40" id="ehV-qk-QHe"/>
                             <constraint firstItem="MVl-dC-PVO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gci-Op-TKk"/>
                             <constraint firstItem="V1T-8t-Lgh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o3u-0Y-Epy"/>
+                            <constraint firstItem="Cls-57-0hr" firstAttribute="centerX" secondItem="Dv3-gi-ckg" secondAttribute="centerX" id="rfr-4L-kwZ"/>
+                            <constraint firstItem="Dv3-gi-ckg" firstAttribute="top" secondItem="Cls-57-0hr" secondAttribute="bottom" constant="16" id="rt0-e4-uAa"/>
                             <constraint firstItem="MVl-dC-PVO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-10" id="zXb-1s-R57"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="Vl6-OM-5Fh"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Quotes!" id="6eO-xQ-6VJ">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="0YQ-e4-3Hs">
                             <connections>
@@ -70,6 +95,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="authorLabel" destination="MVl-dC-PVO" id="KP7-QD-lWC"/>
+                        <outlet property="avatarImage" destination="Cls-57-0hr" id="vvP-gG-wJg"/>
+                        <outlet property="logLabel" destination="Dv3-gi-ckg" id="g01-j0-sdh"/>
                         <outlet property="quoteLabel" destination="D4a-q3-gnF" id="jXx-6t-Tp8"/>
                     </connections>
                 </viewController>
@@ -97,7 +124,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-th-m7V">
                                 <rect key="frame" x="20" y="74" width="47" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plutarch, Eminem, You, etc." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSi-ck-5xM">
@@ -108,13 +135,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-is-E0v">
                                 <rect key="frame" x="20" y="140" width="51.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timeframe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPr-20-fL3">
                                 <rect key="frame" x="20" y="207" width="82.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Timeframe, i.e. morning, noon, etc." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2wF-9k-UlS">

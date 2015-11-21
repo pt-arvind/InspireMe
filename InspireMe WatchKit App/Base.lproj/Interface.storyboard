@@ -10,7 +10,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="QuotesInterfaceController" customModule="InspireMe_WatchKit_App_Extension">
                     <items>
-                        <group width="1" height="202" alignment="left" layout="vertical" id="VnF-7a-zfe">
+                        <group width="1" height="325" alignment="left" layout="vertical" id="VnF-7a-zfe">
                             <items>
                                 <label width="136" height="136.5" alignment="left" textAlignment="left" numberOfLines="0" id="0Xu-RY-YFi">
                                     <string key="text">Testing, attention please, to detention soon as someone mentions me, here's my 10 cents, my 2 cents is free, a nuisance, who sent, you sent for me?</string>
@@ -22,16 +22,24 @@
                                         <action selector="nextQuote" destination="AgC-eL-Hgc" id="o09-aG-6YI"/>
                                     </connections>
                                 </button>
+                                <group width="1" height="107" alignment="left" id="d56-7Y-tT8">
+                                    <items>
+                                        <timer alignment="center" verticalAlignment="center" textAlignment="left" id="b65-Ga-7Z4">
+                                            <calendarUnit key="units" month="YES" day="YES" hour="YES" minute="YES" second="YES" weekOfMonth="YES"/>
+                                        </timer>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
                     <connections>
                         <outlet property="authorLabel" destination="p54-Pc-pPg" id="wEq-Sb-ySz"/>
+                        <outlet property="avatarGroup" destination="d56-7Y-tT8" id="4wW-gt-4UG"/>
                         <outlet property="quoteLabel" destination="0Xu-RY-YFi" id="4ka-EA-Nf0"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="488" y="414.5"/>
+            <point key="canvasLocation" x="488" y="476"/>
         </scene>
     </scenes>
 </document>
